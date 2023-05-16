@@ -1,14 +1,14 @@
 <form style="width: 500px; border: 1px solid black;">
     <div style="display: flex; flex-direction: column;">
     <label for="name">Name</label>
-    <input type="text" id="name"/>
+    <input type="text" id="name" #itemName/>
     </div>
     <div style="display: flex; flex-direction: column;">
     <label for="amount">Amount</label>
-    <input type="number" id="amount"/>
+    <input type="number" id="amount" #itemAmount/>
     </div>
     <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 10px;">
-    <button>Add</button>
+    <button (click)="onAdd()">Add</button>
     <button>Delete</button>
     <button>Clear</button>
 </div>

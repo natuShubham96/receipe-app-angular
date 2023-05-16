@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Receipe } from '../../../receipes/receipe.model';
 
 @Component({
   selector: 'app-receipe-item',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./receipe-item.component.css']
 })
 export class ReceipeItemComponent {
-
+  @Input() receipe: Receipe = {name: '', description: '', imagePath: ''}
 }

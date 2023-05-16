@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  componentSelected: string = 'Receipes'
+  componentSelected?: string;
 
   onComponentChange(component: string) {
     this.componentSelected = component;

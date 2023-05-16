@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Receipe } from './receipe.model';
 
 @Component({
   selector: 'app-receipes',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./receipes.component.css']
 })
 export class ReceipesComponent {
+  receipeSelected: Receipe = {name: '', description: '', imagePath: ''}
 
+  onReceipeClick(receipe: Receipe) {
+    this.receipeSelected.name = receipe.name;
+  }
 }

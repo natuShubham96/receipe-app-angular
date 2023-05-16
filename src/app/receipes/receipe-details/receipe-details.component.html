@@ -1,7 +1,7 @@
 <div style="display: flex; flex-direction: column;">
     <img src="" />
-    <h2>Receipe Name</h2>
+    <h2>Receipe Name {{receipeSelected && receipeSelected.name}}</h2>
     <button>Manage</button>
-    <p>Description</p>
+    <p>Description {{receipeSelected && receipeSelected.description}}</p>
     <h3>Ingredients</h3>
 </div>

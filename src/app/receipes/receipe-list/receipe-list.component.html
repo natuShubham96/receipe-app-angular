@@ -1,9 +1,7 @@
 <div>
     <button>Add Receipe</button>
     <hr>
-    <div *ngFor="let receipe of receipeItems" style="border: 1px solid black;">
-        <h2>{{receipe.name}}</h2>
-        <p>{{receipe.description}}</p>
-        <img src="{{receipe.imagePath}}" >
+    <div *ngFor="let receipe of receipeItems" style="border: 1px solid black; cursor: pointer;" (click)="onReceipeClick(receipe)">
+        <app-receipe-item [receipe]="receipe"></app-receipe-item>
     </div>
 </div>
