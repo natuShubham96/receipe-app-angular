@@ -7,5 +7,5 @@ import { Receipe } from '../../../receipes/receipe.model';
   styleUrls: ['./receipe-item.component.css']
 })
 export class ReceipeItemComponent {
-  @Input() receipe: Receipe = {name: '', description: '', imagePath: ''}
+  @Input() receipe: Receipe = {name: '', description: '', imagePath: '', ingredients: []}
 }

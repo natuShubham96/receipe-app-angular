@@ -1,7 +1,14 @@
 <div style="display: flex; flex-direction: column;">
     <img src="" />
     <h2>Receipe Name {{receipeSelected && receipeSelected.name}}</h2>
-    <button>Manage</button>
-    <p>Description {{receipeSelected && receipeSelected.description}}</p>
+    <select (click)="onSelect($event)">
+        <option>Manage</option>
+        <option value="To Shopping List">To Shopping List</option>
+        <option value="Edit Receipe">Edit Receipe</option>
+        <option value="Delete Receipe">Delete Receipe</option>
+      </select>    <p>Description {{receipeSelected && receipeSelected.description}}</p>
     <h3>Ingredients</h3>
+    <div *ngFor="let ing of receipeSelected?.ingredients">
+    <p>{{ing.name}} - {{ing.amount}}</p>
+</div>
 </div>
